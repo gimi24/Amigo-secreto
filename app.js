@@ -39,3 +39,8 @@ function sortearAmigo() {
 
     mostrarResultado(amigoSorteado); // Muestra el resultado del sorteo
 }
+
+function mostrarResultado(amigoSorteado) {
+    const resultado = document.getElementById('resultado'); // Obtiene el elemento del resultado
+    resultado.innerHTML = `<li> Tu amigo secreto es: <strong> ${amigoSorteado}</strong></li>`; // Muestra el amigo sorteado en el resultado
+}
