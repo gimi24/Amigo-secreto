@@ -27,3 +27,15 @@ function actualizarLista() {
         lista.appendChild(li); // Agrega el elemento de lista a la lista de amigos
     });
 }
+
+function sortearAmigo() {
+    if (listaAmigos.length === 0) {
+        alert('Debe haber al menos un nombre en la lista para realizar el sorteo.'); // Si no hay amigos en la lista, muestra un mensaje de alerta
+        return;
+    }
+
+    const indiceAleatorio = Math.floor(Math.random() * listaAmigos.length); // Obtiene un índice aleatorio de la lista de amigos
+    const amigoSorteado = listaAmigos[indiceAleatorio]; // Obtiene el amigo sorteado
+
+    mostrarResultado(amigoSorteado); // Muestra el resultado del sorteo
+}
